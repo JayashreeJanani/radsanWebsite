@@ -8,7 +8,7 @@
 		<version>4.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.RSI</groupId>
+	<groupId>com.rsi</groupId>
 	<artifactId>radsan-be</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>radsan-be</name>
