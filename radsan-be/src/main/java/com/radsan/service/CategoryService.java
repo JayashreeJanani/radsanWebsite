@@ -17,5 +17,33 @@ public class CategoryService {
 	public List<Category> getAllCategories(){
 		return categoryRepository.findAll();
 	}
+//for API GET /api/categories/{id}
+	public Category getProductById(Integer id) {
+	    return categoryRepository.findById(id)
+	            .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
+	}
 
+//for API POST /api/categories
+	public Category createCategory(Category category) {
+		return categoryRepository.save(category);
+	}
+	//for API PUT /api/categories/{id}
+	public Category updateCategory(Integer id, Category updatedCategory) {
+
+	    Category category = categoryRepository.findById(id)
+	            .orElseThrow(() -> new RuntimeException("Category not found"));
+	    category.setName(updatedCategory.getName());
+	    category.setDescription(updatedCategory.getDescription());
+
+	    return categoryRepository.save(category);
+	}
+	//for api DELETE /api/categories/{id}
+	public void deleteCategory(Integer id) {
+
+	    Category category = categoryRepository.findById(id)
+	            .orElseThrow(() -> new RuntimeException("Category not found"));
+
+	    categoryRepository.delete(category);
+	}
 }
+

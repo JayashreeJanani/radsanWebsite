@@ -1,20 +1,25 @@
 package com.radsan.entity;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-@Entity
-@Table(name = "categories")
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-public class Category {
+@Entity
+@Table(name = "industries")
+public class Industry {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String name;
-	private String description;
+	private String name;//industry name
+	private String description;//description  of the industry
 	@CreationTimestamp
 	@Column(name = "created_at", updatable = false)
 	private LocalDateTime createdAt;
@@ -22,6 +27,8 @@ public class Category {
 	@UpdateTimestamp
 	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
+	
+	public Industry() {}
 
 	public Integer getId() {
 		return id;
@@ -62,9 +69,8 @@ public class Category {
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-
-
-
+	
+	
 	
 	
 
