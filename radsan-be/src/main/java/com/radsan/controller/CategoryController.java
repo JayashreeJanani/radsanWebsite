@@ -2,6 +2,9 @@ package com.radsan.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
+
+import com.radsan.dto.CategoryRequestDTO;
+import com.radsan.dto.CategoryResponseDTO;
 import com.radsan.entity.Category;
 import com.radsan.service.CategoryService;
 
@@ -17,25 +20,25 @@ public class CategoryController {
 	}
 //for API GET /api/categories
 	@GetMapping
-	public List<Category> getCategories(){
+	public List<CategoryResponseDTO> getCategories(){
 		return service.getAllCategories();
 	}
 
 //for API GET /api/categories/{id}
 	@GetMapping("/{id}")
-	public Category getcategoryById(@PathVariable Integer id) {
+	public CategoryResponseDTO getcategoryById(@PathVariable Integer id) {
 	    return service.getProductById(id);
 	}
 //for API POST /api/categories
 	@PostMapping
-	public Category createCategory(@RequestBody Category category) {
+	public CategoryResponseDTO createCategory(@RequestBody CategoryRequestDTO category) {
 		return service.createCategory(category);
 		
 	}
 	//for API PUT /api/categories/{id}
 	@PutMapping("/{id}")
-	 public Category updateCategory(@PathVariable Integer id,
-	                             @RequestBody Category category) {
+	 public CategoryResponseDTO updateCategory(@PathVariable Integer id,
+	                             @RequestBody CategoryRequestDTO category) {
 
 	    return service.updateCategory(id, category);
 	}

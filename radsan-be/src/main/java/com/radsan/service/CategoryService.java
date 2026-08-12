@@ -1,5 +1,7 @@
 package com.radsan.service;
 
+import com.radsan.dto.CategoryRequestDTO;
+import com.radsan.dto.CategoryResponseDTO;
 import com.radsan.entity.Category;
 import com.radsan.respository.CategoryRepository;
 import org.springframework.stereotype.Service;
@@ -14,28 +16,61 @@ public class CategoryService {
 		this.categoryRepository = categoryRepository;
 	}
 	
-	public List<Category> getAllCategories(){
-		return categoryRepository.findAll();
+	public List<CategoryResponseDTO> getAllCategories(){
+		return categoryRepository.findAll()
+				.stream()
+				.map(category -> new CategoryResponseDTO(
+						category.getId(),
+						category.getName(),
+						category.getDescription()
+						)).toList();
 	}
 //for API GET /api/categories/{id}
-	public Category getProductById(Integer id) {
-	    return categoryRepository.findById(id)
+	public CategoryResponseDTO getProductById(Integer id) {
+		Category category = categoryRepository.findById(id)
 	            .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
+		
+		CategoryResponseDTO categoryResponseDTO = new CategoryResponseDTO();
+		
+		categoryResponseDTO.setId(category.getId());
+		categoryResponseDTO.setName(category.getName());
+		categoryResponseDTO.setDescription(category.getDescription());
+		
+		return categoryResponseDTO;
 	}
 
 //for API POST /api/categories
-	public Category createCategory(Category category) {
-		return categoryRepository.save(category);
+	public CategoryResponseDTO createCategory(CategoryRequestDTO categoryRequestDTO) {
+		Category category = new Category();
+		category.setName(categoryRequestDTO.getName());
+		category.setDescription(categoryRequestDTO.getDescription());
+				
+		Category savedCategory = categoryRepository.save(category);
+		CategoryResponseDTO categoryResponseDTO = new CategoryResponseDTO();
+		
+		categoryResponseDTO.setId(savedCategory.getId());
+		categoryResponseDTO.setName(savedCategory.getName());
+		categoryResponseDTO.setDescription(savedCategory.getDescription());
+		
+		return categoryResponseDTO;
 	}
 	//for API PUT /api/categories/{id}
-	public Category updateCategory(Integer id, Category updatedCategory) {
+	public CategoryResponseDTO updateCategory(Integer id, CategoryRequestDTO updatedCategory) {
 
 	    Category category = categoryRepository.findById(id)
 	            .orElseThrow(() -> new RuntimeException("Category not found"));
 	    category.setName(updatedCategory.getName());
 	    category.setDescription(updatedCategory.getDescription());
 
-	    return categoryRepository.save(category);
+	    Category updatedCategories = categoryRepository.save(category);
+	    CategoryResponseDTO updatedCategoryResponseDTO = new CategoryResponseDTO();
+	    
+	    updatedCategoryResponseDTO.setId(updatedCategories.getId());
+	    updatedCategoryResponseDTO.setName(updatedCategories.getName());
+	    updatedCategoryResponseDTO.setDescription(updatedCategories.getDescription());
+	    
+	    return updatedCategoryResponseDTO;
+	    
 	}
 	//for api DELETE /api/categories/{id}
 	public void deleteCategory(Integer id) {

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.radsan.service.ProductService;
+import com.radsan.dto.ProductRequestDTO;
+import com.radsan.dto.ProductResponseDTO;
 import com.radsan.entity.Product;
 
 @RestController
@@ -24,21 +26,21 @@ public class ProductController {
 	}
 
 	@GetMapping
-	public List<Product> getProducts(){
+	public List<ProductResponseDTO> getProducts(){
 		return service.getAllProducts();
 	}
 	@GetMapping("/{id}")
-	public Product getProductById(@PathVariable Integer id) {
+	public ProductResponseDTO getProductById(@PathVariable Integer id) {
 	    return service.getProductById(id);
 	}
 	@PostMapping
-	public Product createProduct(@RequestBody Product product) {
+	public ProductResponseDTO createProduct(@RequestBody ProductRequestDTO product) {
 		return service.createProduct(product);
 		
 	}
 	@PutMapping("/{id}")
-	public Product updateProduct(@PathVariable Integer id,
-	                             @RequestBody Product product) {
+	public ProductResponseDTO updateProduct(@PathVariable Integer id,
+	                             @RequestBody ProductRequestDTO product) {
 
 	    return service.updateProduct(id, product);
 	}

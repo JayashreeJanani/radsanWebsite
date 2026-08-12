@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.Job_postingsRequestDTO;
+import com.radsan.dto.Job_postingsResponseDTO;
 import com.radsan.entity.Job_postings;
 import com.radsan.service.Job_postingsService;
 
@@ -24,22 +26,22 @@ public class Job_postingsController {
 	}
 	
 	@GetMapping
-	public List<Job_postings> getAllPostings(){
+	public List<Job_postingsResponseDTO> getAllPostings(){
 		return jobPostingsService.getAllJobPostings();
 	}
 	
 	@GetMapping("/{id}")
-	public Job_postings getPostingById(@PathVariable Integer id) {
+	public Job_postingsResponseDTO getPostingById(@PathVariable Integer id) {
 		return jobPostingsService.getJobPostingsId(id);
 	}
 	
 	@PostMapping
-	public Job_postings createPosting(@RequestBody Job_postings job_postings) {
+	public Job_postingsResponseDTO createPosting(@RequestBody Job_postingsRequestDTO job_postings) {
 		return jobPostingsService.createJobPostings(job_postings);
 	}
 	
 	@PutMapping("/{id}")
-	public Job_postings updatePostings(@PathVariable Integer id, @RequestBody Job_postings job_postings) {
+	public Job_postingsResponseDTO updatePostings(@PathVariable Integer id, @RequestBody Job_postingsRequestDTO job_postings) {
 		return jobPostingsService.updateJobPostings(id, job_postings);
 	}
 	
