@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.radsan.dto.Contact_submissionsRequestDTO;
+import com.radsan.dto.Contact_submissionsResponseDTO;
 import com.radsan.entity.Contact_submissions;
 import com.radsan.respository.Contact_submissionsRepository;
 
@@ -17,20 +19,49 @@ public class Contact_submissionsService {
 		
 	}
 //for  api: GET /api/contacts	
-	public List<Contact_submissions> getAllContacts(){
-		return contactRepository.findAll();
+	public List<Contact_submissionsResponseDTO> getAllContacts(){
+		return contactRepository.findAll()
+				.stream().map(contacts -> new Contact_submissionsResponseDTO(
+						contacts.getId(),
+						contacts.getName(),
+						contacts.getEmail(),
+						contacts.getSubject(),
+						contacts.getMessage()
+						)).toList();
 	}
 
 	//for api: GET /api/contacts/{id}
-	public Contact_submissions getContactsById(Integer id) {
-		return contactRepository.findById(id)
+	public Contact_submissionsResponseDTO getContactsById(Integer id) {
+		Contact_submissions contact =  contactRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Blog not found with id: " + id));
+		Contact_submissionsResponseDTO contactResponseDto = new Contact_submissionsResponseDTO();
+		contactResponseDto.setId(contact.getId());
+		contactResponseDto.setName(contact.getName());
+		contactResponseDto.setEmail(contact.getEmail());
+		contactResponseDto.setSubject(contact.getSubject());
+		contactResponseDto.setMessage(contact.getMessage());
+		
+		return contactResponseDto;
 		
 	}
 	
 	//for api: POST /api/contacts
-	public Contact_submissions createContacts(Contact_submissions contact_submissions) {
-		return contactRepository.save(contact_submissions);
+	public Contact_submissionsResponseDTO createContacts(Contact_submissionsRequestDTO contactRequestSubmissionsDTO) {
+		Contact_submissions contactSubmissions = new Contact_submissions();
+		contactSubmissions.setName(contactRequestSubmissionsDTO.getName());
+		contactSubmissions.setEmail(contactRequestSubmissionsDTO.getEmail());
+		contactSubmissions.setSubject(contactRequestSubmissionsDTO.getSubject());
+		contactSubmissions.setMessage(contactRequestSubmissionsDTO.getMessage());
+		
+		Contact_submissions savedContacts = contactRepository.save(contactSubmissions);
+		Contact_submissionsResponseDTO contact_submissionsDTO = new Contact_submissionsResponseDTO();
+		contact_submissionsDTO.setId(savedContacts.getId());
+		contact_submissionsDTO.setName(savedContacts.getName());
+		contact_submissionsDTO.setEmail(savedContacts.getEmail());
+		contact_submissionsDTO.setSubject(savedContacts.getSubject());
+		contact_submissionsDTO.setMessage(savedContacts.getMessage());
+		
+		return contact_submissionsDTO;
 	}
 	
 	//for api: DELETE /api/contacts/{id}

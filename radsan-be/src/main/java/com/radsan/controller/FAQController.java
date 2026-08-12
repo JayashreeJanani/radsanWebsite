@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.FAQRequestDTO;
+import com.radsan.dto.FAQResponseDTO;
 import com.radsan.entity.Faq;
 import com.radsan.service.FAQService;
 
@@ -24,25 +26,26 @@ public class FAQController {
 	
 	//for api: GET /api/faqs
 	@GetMapping
-	public List<Faq> getFaqs(){
+	public List<FAQResponseDTO> getFaqs(){
 		return faqService.getAllFaqs();
 	}
 	
 	//for api: GET /api/faqs/{id}
 	@GetMapping("/{id}")
-	public Faq getFaqById(@PathVariable Integer id) {
+	public FAQResponseDTO getFaqById(@PathVariable Integer id) {
 		return faqService.getFaqById(id);
+		
 	}
 	//for api: POST /api/faqs
 	@PostMapping
-	public Faq createFaqs(@RequestBody Faq faq) {
-		return faqService.createFaq(faq);
+	public FAQResponseDTO createFaqs(@RequestBody FAQRequestDTO faqResponseDto) {
+		return faqService.createFaq(faqResponseDto);
 	}
 	
 	//for api: PUT /api/faqs/{id}
 	@PutMapping("/{id}")
-	public Faq updateFaqs(@PathVariable Integer id, @RequestBody Faq faq) {
-		return faqService.updateFaq(id, faq);
+	public FAQResponseDTO updateFaqs(@PathVariable Integer id, @RequestBody FAQRequestDTO faqRequestDto) {
+		return faqService.updateFaq(id, faqRequestDto);
 	}
 	
 	//for api:DELETE /api/faqs/{id}

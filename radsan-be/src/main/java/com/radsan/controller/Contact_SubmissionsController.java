@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.Contact_submissionsRequestDTO;
+import com.radsan.dto.Contact_submissionsResponseDTO;
 import com.radsan.entity.Contact_submissions;
 import com.radsan.service.Contact_submissionsService;
 
@@ -24,19 +26,19 @@ public class Contact_SubmissionsController {
 	}
 	//for api: GET /api/contacts
 	@GetMapping
-	public List<Contact_submissions> getAllContacts(){
+	public List<Contact_submissionsResponseDTO> getAllContacts(){
 		return contactService.getAllContacts();
 	}
 	
 	//for api: GET /api/contact/{id}
 	@GetMapping("/{id}")
-	public Contact_submissions getContactById(@PathVariable Integer id) {
+	public Contact_submissionsResponseDTO getContactById(@PathVariable Integer id) {
 		return contactService.getContactsById(id);
 	}
 	
 	//for api: POST /api/contact
 	@PostMapping
-	public Contact_submissions createContact(@RequestBody Contact_submissions contact_submissions) {
+	public Contact_submissionsResponseDTO createContact(@RequestBody Contact_submissionsRequestDTO contact_submissions) {
 		return contactService.createContacts(contact_submissions);
 	}
 	//for api: DELETE /api/contacts/{id}

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.Company_infoRequestDTO;
+import com.radsan.dto.Company_infoResponseDTO;
 import com.radsan.entity.Company_info;
 import com.radsan.service.Company_infoService;
 
@@ -23,22 +25,22 @@ public class Company_infoController {
 	}
 	//for api: GET /api/company_info
 	@GetMapping
-	public List<Company_info> getAllCompanyInfo(){
+	public List<Company_infoResponseDTO> getAllCompanyInfo(){
 		return companyInfoService.getAllCompanyInfo();
 	}
 	// for api:GET /api/company_info/{id}
 	@GetMapping("/{id}")
-	public Company_info getCompanyInfoByID(@PathVariable Integer id) {
+	public Company_infoResponseDTO getCompanyById(@PathVariable Integer id) {
 		return companyInfoService.getCompanyInfoById(id);
 	}
 	//for api: POST /api/company_info
 	@PostMapping
-	public Company_info createCompanyInfo(@RequestBody Company_info company_info) {
+	public Company_infoResponseDTO createCompanyInfo(@RequestBody Company_infoRequestDTO company_info) {
 		return companyInfoService.createCompanyInfo(company_info);
 	}
 	//for api: PUT /api/company_info/{id}
 	@PutMapping("/{id}")
-	public Company_info updateCompany_info(@PathVariable Integer id, @RequestBody Company_info company_info) {
+	public Company_infoResponseDTO updateCompany_info(@PathVariable Integer id, @RequestBody Company_infoRequestDTO company_info) {
 		return companyInfoService.updateCompanyInfo(id, company_info);
 	}
 }

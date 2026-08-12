@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.radsan.dto.TestimonialsRequestDTO;
+import com.radsan.dto.TestimonialsResponseDTO;
 import com.radsan.entity.Testimonials;
 import com.radsan.respository.TestimonialsRepository;
 @Service
@@ -13,29 +15,64 @@ public class TestimonialService {
 		this.testimonialRepository = testimonialRepository;
 	}
 //for api: GET /api/testimonials	
-	public List<Testimonials> getAllTestimonials(){
-		return testimonialRepository.findAll(); 
-	}
+	public List<TestimonialsResponseDTO> getAllTestimonials(){
+		return testimonialRepository.findAll()
+				.stream()
+				.map(testimonials -> new TestimonialsResponseDTO(testimonials.getId(),
+						testimonials.getClient_name(),
+						testimonials.getCompany(),
+						testimonials.getFeedback())).toList();
+		}
 	
 //for api: GET /api/testimonials
-	public Testimonials getTestimonialById(Integer id) {
-		return testimonialRepository.findById(id).orElseThrow(() -> new RuntimeException("Testimonial not found with id: " + id));
+	public TestimonialsResponseDTO getTestimonialById(Integer id) {
+		Testimonials testimonials =  testimonialRepository.findById(id).orElseThrow(() -> new RuntimeException("Testimonial not found with id: " + id));
+		TestimonialsResponseDTO testimonialsResponseDto = new TestimonialsResponseDTO();
+		testimonialsResponseDto.setId(testimonials.getId());
+		testimonialsResponseDto.setClient_name(testimonials.getClient_name());
+		testimonialsResponseDto.setCompany(testimonials.getCompany());
+		testimonialsResponseDto.setFeedback(testimonials.getFeedback());
+		
+		return testimonialsResponseDto;
 	}
 	
 // for api: POST /api/testimonials
-	public Testimonials createTestimonials(Testimonials testimonials) {
-		return testimonialRepository.save(testimonials);
+	public TestimonialsResponseDTO createTestimonials(TestimonialsRequestDTO testimonialsRequestDTO) {
+		Testimonials testimonials = new Testimonials();
+		testimonials.setClient_name(testimonialsRequestDTO.getClient_name());
+		testimonials.setCompany(testimonialsRequestDTO.getCompany());
+		testimonials.setFeedback(testimonialsRequestDTO.getFeedback());
+		
+		Testimonials savedTestimonials = testimonialRepository.save(testimonials);
+		TestimonialsResponseDTO testimonialsResponseDTO = new TestimonialsResponseDTO();
+		
+		testimonialsResponseDTO.setId(savedTestimonials.getId());
+		testimonialsResponseDTO.setClient_name(savedTestimonials.getClient_name());
+		testimonialsResponseDTO.setCompany(savedTestimonials.getCompany());
+		testimonialsResponseDTO.setFeedback(savedTestimonials.getFeedback());
+		
+		return testimonialsResponseDTO;
 		
 	}
 
 	//for api: PUT /api/testimonials/{id}
-	public Testimonials updateTestimonials(Integer id, Testimonials updatedTestimonials) {
+	public TestimonialsResponseDTO updateTestimonials(Integer id, TestimonialsRequestDTO updatedTestimonials) {
 		Testimonials testimonials = testimonialRepository.findById(id).orElseThrow(() -> new RuntimeException("Testimonial not found"));
 		testimonials.setClient_name(updatedTestimonials.getClient_name());
 		testimonials.setCompany(updatedTestimonials.getCompany());
 		testimonials.setFeedback(updatedTestimonials.getFeedback());
 		
-		return testimonialRepository.save(testimonials);
+		Testimonials updatedTestimonial =  testimonialRepository.save(testimonials);
+		TestimonialsResponseDTO testimonialsResponseDTO = new TestimonialsResponseDTO();
+		
+		testimonialsResponseDTO.setId(updatedTestimonial.getId());
+		testimonialsResponseDTO.setClient_name(updatedTestimonial.getClient_name());
+		testimonialsResponseDTO.setCompany(updatedTestimonial.getCompany());
+		testimonialsResponseDTO.setFeedback(updatedTestimonial.getFeedback());
+		
+		return testimonialsResponseDTO;
+		
+		
 	}
 	
 	//for api: DELETE /api/testimonials/{id}

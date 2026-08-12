@@ -11,37 +11,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.IndustryRequestDTO;
+import com.radsan.dto.IndustryResponseDTO;
 import com.radsan.entity.Industry;
 
 import com.radsan.service.IndustryService;
 
 @RestController
 @RequestMapping("/api/industries")
-public class IndustryController {
+public class IndustryController{
 	private final IndustryService iService;
 	public IndustryController(IndustryService iService) {
 		this.iService = iService;
 	}
 	//for API: GET /api/industries
  @GetMapping
-	public List<Industry> getIndustries(){
+	public List<IndustryResponseDTO> getIndustries(){
 		return iService.getAllIndustries();
 	}
 //for API: GET /api/industries/{id}
  @GetMapping("/{id}")
-	public Industry getIndustryById(@PathVariable Integer id) {
+	public IndustryResponseDTO getIndustryById(@PathVariable Integer id) {
 	    return iService.getIndustryById(id);
 	}
 //for api POST /api/industries
  @PostMapping
-	public Industry createIndustry(@RequestBody Industry industry) {
+	public IndustryResponseDTO createIndustry(@RequestBody IndustryRequestDTO industry) {
 		return iService.createIndustry(industry);
 		
 	}
  //for api PUT /api/industries/{id}
  @PutMapping("/{id}")
-	public Industry updateIndustry(@PathVariable Integer id,
-	                             @RequestBody Industry industry) {
+	public IndustryResponseDTO updateIndustry(@PathVariable Integer id,
+	                             @RequestBody IndustryRequestDTO industry) {
 
 	    return iService.updateIndustry(id, industry);
 	}

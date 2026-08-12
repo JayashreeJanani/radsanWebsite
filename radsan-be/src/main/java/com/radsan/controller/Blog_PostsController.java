@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.Blog_postsRequestDTO;
+import com.radsan.dto.Blog_postsResponseDTO;
 import com.radsan.entity.Blog_Posts;
 import com.radsan.service.Blog_PostsService;
 
@@ -23,23 +25,23 @@ public class Blog_PostsController {
 	}
 	//for api: GET /api/blogs	
 	@GetMapping
-	public List<Blog_Posts> getBlogs(){
+	public List<Blog_postsResponseDTO> getBlogs(){
 		return blogService.getAllBlogs();
 	}
 	//for api: GET /api/blogs/{id}
 	@GetMapping("/{id}")
-	public Blog_Posts getBlogsById(@PathVariable Integer id) {
+	public Blog_postsResponseDTO getBlogsById(@PathVariable Integer id) {
 		return blogService.getBlogById(id);
 	}
 	
 	//for api: POST /api/blogs
 	@PostMapping
-	public Blog_Posts createBlogs(@RequestBody Blog_Posts blogPosts) {
+	public Blog_postsResponseDTO createBlogs(@RequestBody Blog_postsRequestDTO blogPosts) {
 		return blogService.createBlogs(blogPosts);
 	}
 	//for api: PUT /api/blogs/{id}
 	@PutMapping("/{id}")
-	public Blog_Posts updateBlogs(@PathVariable Integer id, @RequestBody Blog_Posts blogPosts) {
+	public Blog_postsResponseDTO updateBlogs(@PathVariable Integer id, @RequestBody Blog_postsRequestDTO blogPosts) {
 		return blogService.updateBlogs(id, blogPosts);
 	}
 	//for api: DELETE /api/blogs/{id}

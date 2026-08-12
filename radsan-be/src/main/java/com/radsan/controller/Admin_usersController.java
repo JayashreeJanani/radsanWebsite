@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.radsan.dto.AdminRequestDTO;
+import com.radsan.dto.AdminResponseDTO;
 import com.radsan.entity.Admin_users;
 import com.radsan.service.Admin_usersService;
 
@@ -26,23 +28,23 @@ public class Admin_usersController {
 	}
 	//for api: GET /api/admin_users
 	@GetMapping
-	public List<Admin_users> getAllAdmins(){
+	public List<AdminResponseDTO> getAllAdmins(){
 		return adminService.getAllAdminUsers();
 	}
 	
 	//for api: GET /api/admin_users/{id}
 	@GetMapping("/{id}")
-	public Admin_users getAdminById(@PathVariable Integer id) {
+	public AdminResponseDTO getAdminById(@PathVariable Integer id) {
 		return adminService.getAdminUsersById(id);
 	}
 	
 	@PostMapping
-	public Admin_users createAdmins(@RequestBody Admin_users admin_users) {
+	public AdminResponseDTO createAdmins(@RequestBody AdminRequestDTO admin_users) {
 		return adminService.createAdmin_users(admin_users);
 	}
 	
 	@PutMapping("/{id}")
-	public Admin_users updateAdmins(@PathVariable Integer id, @RequestBody Admin_users admin_users) {
+	public AdminResponseDTO updateAdmins(@PathVariable Integer id, @RequestBody AdminRequestDTO admin_users) {
 		return adminService.updateAdmin_users(id, admin_users);
 	}
 	

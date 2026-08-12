@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.radsan.dto.AdminRequestDTO;
+import com.radsan.dto.AdminResponseDTO;
 import com.radsan.entity.Admin_users;
 import com.radsan.respository.Admin_usersRepository;
 
@@ -17,24 +19,57 @@ public class Admin_usersService {
 	}
 	
 	//for api: GET /api/admin_users
-	public List<Admin_users> getAllAdminUsers(){
-		return adminRepository.findAll();
+	public List<AdminResponseDTO> getAllAdminUsers(){
+		return adminRepository.findAll()
+				.stream()
+				.map(admin -> new AdminResponseDTO(
+						admin.getId(),
+						admin.getUsername(),
+						admin.getEmail(),
+						
+						admin.getIs_active())).toList();
 	}
 	
 	//for api: GET /api/admin_users/{id}
-	public Admin_users getAdminUsersById(Integer id) {
-		return adminRepository.findById(id)
+	public AdminResponseDTO getAdminUsersById(Integer id) {
+		Admin_users admins =  adminRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Admin not found in id" +id));
+		AdminResponseDTO admResponseDTO = new AdminResponseDTO();
+		
+		admResponseDTO.setId(admins.getId());
+		admResponseDTO.setUsername(admins.getUsername());
+		admResponseDTO.setEmail(admins.getEmail());
+		admResponseDTO.setIs_active(admins.getIs_active());
+		
+		return admResponseDTO;
+		
 	}
 	
 	//for api: POST /api/admin_users
-	public Admin_users createAdmin_users(Admin_users admin_users) {
-		return adminRepository.save(admin_users);
+	public AdminResponseDTO createAdmin_users(AdminRequestDTO adminRequestDTO) {
+
+	    Admin_users admins = new Admin_users();
+
+	    admins.setUsername(adminRequestDTO.getUsername());
+	    admins.setEmail(adminRequestDTO.getEmail());
+	    admins.setPassword_hash(adminRequestDTO.getPassword_hash());
+	    admins.setIs_active(adminRequestDTO.getIs_active());
+
+	    Admin_users savedAdmins = adminRepository.save(admins);
+
+	    AdminResponseDTO responseDTO = new AdminResponseDTO();
+
+	    responseDTO.setId(savedAdmins.getId());
+	    responseDTO.setUsername(savedAdmins.getUsername());
+	    responseDTO.setEmail(savedAdmins.getEmail());
+	    responseDTO.setIs_active(savedAdmins.getIs_active());
+
+	    return responseDTO;
 	}
 	
 	//for api: PUT /api/admin_users/{id}
 	
-	public Admin_users updateAdmin_users(Integer id, Admin_users updatedAdminUsers) {
+	public AdminResponseDTO updateAdmin_users(Integer id, AdminRequestDTO updatedAdminUsers) {
 		Admin_users admin_users = adminRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Admin not found in id" +id));
 		admin_users.setUsername(updatedAdminUsers.getUsername());
@@ -42,7 +77,14 @@ public class Admin_usersService {
 		admin_users.setPassword_hash(updatedAdminUsers.getPassword_hash());
 		admin_users.setIs_active(updatedAdminUsers.getIs_active());
 		
-		return adminRepository.save(admin_users);
+		Admin_users updatedAdmins = adminRepository.save(admin_users);
+		AdminResponseDTO updatedAdmResponseDTO = new AdminResponseDTO();
+		updatedAdmResponseDTO.setId(updatedAdmins.getId());
+		updatedAdmResponseDTO.setUsername(updatedAdmins.getUsername());
+		updatedAdmResponseDTO.setEmail(updatedAdmins.getEmail());
+		updatedAdmResponseDTO.setIs_active(updatedAdmins.getIs_active());
+		
+		return updatedAdmResponseDTO;
 		
 	}
 	
