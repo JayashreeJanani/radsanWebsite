@@ -1,9 +1,17 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class Job_postingsRequestDTO {
 	
+	@NotBlank(message = "Title cannot be empty")
 	private String title;
+	
+	@NotBlank(message = "Description cannot be empty")
 	private String description;
+	
+	@NotNull(message = "Can be only true or false")
 	private Boolean is_active;
 	
 	public Job_postingsRequestDTO(){}

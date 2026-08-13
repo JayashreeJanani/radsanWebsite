@@ -15,6 +15,8 @@ import com.radsan.dto.Company_infoResponseDTO;
 import com.radsan.entity.Company_info;
 import com.radsan.service.Company_infoService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/company_info")
 public class Company_infoController {
@@ -35,12 +37,12 @@ public class Company_infoController {
 	}
 	//for api: POST /api/company_info
 	@PostMapping
-	public Company_infoResponseDTO createCompanyInfo(@RequestBody Company_infoRequestDTO company_info) {
+	public Company_infoResponseDTO createCompanyInfo(@Valid @RequestBody Company_infoRequestDTO company_info) {
 		return companyInfoService.createCompanyInfo(company_info);
 	}
 	//for api: PUT /api/company_info/{id}
 	@PutMapping("/{id}")
-	public Company_infoResponseDTO updateCompany_info(@PathVariable Integer id, @RequestBody Company_infoRequestDTO company_info) {
+	public Company_infoResponseDTO updateCompany_info(@PathVariable Integer id, @Valid @RequestBody Company_infoRequestDTO company_info) {
 		return companyInfoService.updateCompanyInfo(id, company_info);
 	}
 }

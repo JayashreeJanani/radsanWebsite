@@ -17,6 +17,8 @@ import com.radsan.entity.Industry;
 
 import com.radsan.service.IndustryService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/industries")
 public class IndustryController{
@@ -36,14 +38,14 @@ public class IndustryController{
 	}
 //for api POST /api/industries
  @PostMapping
-	public IndustryResponseDTO createIndustry(@RequestBody IndustryRequestDTO industry) {
+	public IndustryResponseDTO createIndustry(@Valid @RequestBody IndustryRequestDTO industry) {
 		return iService.createIndustry(industry);
 		
 	}
  //for api PUT /api/industries/{id}
  @PutMapping("/{id}")
 	public IndustryResponseDTO updateIndustry(@PathVariable Integer id,
-	                             @RequestBody IndustryRequestDTO industry) {
+	                             @Valid @RequestBody IndustryRequestDTO industry) {
 
 	    return iService.updateIndustry(id, industry);
 	}

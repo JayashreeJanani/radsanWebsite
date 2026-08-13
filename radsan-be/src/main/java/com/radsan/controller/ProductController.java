@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.radsan.service.ProductService;
+
+import jakarta.validation.Valid;
+
 import com.radsan.dto.ProductRequestDTO;
 import com.radsan.dto.ProductResponseDTO;
 import com.radsan.entity.Product;
@@ -34,13 +37,13 @@ public class ProductController {
 	    return service.getProductById(id);
 	}
 	@PostMapping
-	public ProductResponseDTO createProduct(@RequestBody ProductRequestDTO product) {
+	public ProductResponseDTO createProduct(@Valid @RequestBody ProductRequestDTO product) {
 		return service.createProduct(product);
 		
 	}
 	@PutMapping("/{id}")
 	public ProductResponseDTO updateProduct(@PathVariable Integer id,
-	                             @RequestBody ProductRequestDTO product) {
+	                             @Valid @RequestBody ProductRequestDTO product) {
 
 	    return service.updateProduct(id, product);
 	}

@@ -1,10 +1,22 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 public class Company_infoRequestDTO {
+	@NotBlank(message = "Name cannot be emty")
 	private String name;
+	
+	@NotBlank(message = "Address cannot be empty")
 	private String address;
+	
+	@NotBlank(message = "Phone number cannot be empty")
 	private String phone;
+	
+	@Email(message ="Email cannot be empty")
 	private String email;
+	
+	@NotBlank(message ="About cannot be empty")
 	private String about;
 	
 	public Company_infoRequestDTO() {}

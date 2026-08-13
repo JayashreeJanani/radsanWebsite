@@ -15,6 +15,8 @@ import com.radsan.dto.Contact_submissionsResponseDTO;
 import com.radsan.entity.Contact_submissions;
 import com.radsan.service.Contact_submissionsService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/contacts")
 public class Contact_SubmissionsController {
@@ -38,7 +40,7 @@ public class Contact_SubmissionsController {
 	
 	//for api: POST /api/contact
 	@PostMapping
-	public Contact_submissionsResponseDTO createContact(@RequestBody Contact_submissionsRequestDTO contact_submissions) {
+	public Contact_submissionsResponseDTO createContact(@Valid @RequestBody Contact_submissionsRequestDTO contact_submissions) {
 		return contactService.createContacts(contact_submissions);
 	}
 	//for api: DELETE /api/contacts/{id}

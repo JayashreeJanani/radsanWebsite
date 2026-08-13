@@ -1,9 +1,16 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class TestimonialsRequestDTO {
 	
+	@NotBlank(message ="Client_name cannot be empty")
 	private String client_name;
+	
+	@NotBlank(message ="Company name cannot be empty")
 	private String company;
+	
+	@NotBlank(message = "Feedback cannot be empty")
 	private String feedback;
 	
 	public TestimonialsRequestDTO() {}

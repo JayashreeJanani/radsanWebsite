@@ -1,10 +1,27 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
 public class Blog_postsRequestDTO {
 	
+	@NotBlank(message = "Title should not be empty")
 	private String title;
+	
+	@NotBlank(message = "Slug is required")
+	@Size(max = 150, message = "Slug must not exceed 150 characters")
+	@Pattern(
+	    regexp = "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+	    message = "Slug must contain lowercase letters, numbers, and hyphens only"
+	)
 	private String slug;
+	
+	@NotBlank(message = "Content should not be empty")
 	private String content;
+	
+	@NotNull(message = "Published status is required")
 	private Boolean isPublished;
 	
 	public Blog_postsRequestDTO() {}

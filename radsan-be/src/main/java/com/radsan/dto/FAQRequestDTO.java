@@ -1,8 +1,13 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class FAQRequestDTO {
 	
+	@NotBlank(message = "Question is required")
 	private String question;
+	
+	@NotBlank(message = "Answer is required")
     private String answer;
 
     public FAQRequestDTO() {

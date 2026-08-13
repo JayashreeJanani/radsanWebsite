@@ -15,6 +15,8 @@ import com.radsan.dto.Job_ApplicationResponseDTO;
 import com.radsan.entity.Job_application;
 import com.radsan.service.Job_applicationService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/job_application")
 
@@ -37,7 +39,7 @@ public class Job_applicationController {
 	}
 	//for api: POST /api/job_application
 	@PostMapping
-	public Job_ApplicationResponseDTO createApplication(@RequestBody Job_ApplicationRequestDTO job_application) {
+	public Job_ApplicationResponseDTO createApplication(@Valid @RequestBody Job_ApplicationRequestDTO job_application) {
 		return jobApplicationService.createJobApplications(job_application);
 	}
 	

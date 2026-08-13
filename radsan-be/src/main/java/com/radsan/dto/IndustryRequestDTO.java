@@ -1,8 +1,13 @@
 package com.radsan.dto;
 
-public class IndustryRequestDTO {
+import jakarta.validation.constraints.NotBlank;
 
+public class IndustryRequestDTO {
+	
+	@NotBlank(message = "Industry name is required")
 	private String name;//industry name
+	
+	@NotBlank(message ="Industry description is required")
 	private String description;//description  of the industry
 	
 	public IndustryRequestDTO() {}

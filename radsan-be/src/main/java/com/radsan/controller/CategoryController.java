@@ -8,6 +8,8 @@ import com.radsan.dto.CategoryResponseDTO;
 import com.radsan.entity.Category;
 import com.radsan.service.CategoryService;
 
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/categories")
@@ -31,14 +33,14 @@ public class CategoryController {
 	}
 //for API POST /api/categories
 	@PostMapping
-	public CategoryResponseDTO createCategory(@RequestBody CategoryRequestDTO category) {
+	public CategoryResponseDTO createCategory(@Valid @RequestBody CategoryRequestDTO category) {
 		return service.createCategory(category);
 		
 	}
 	//for API PUT /api/categories/{id}
 	@PutMapping("/{id}")
 	 public CategoryResponseDTO updateCategory(@PathVariable Integer id,
-	                             @RequestBody CategoryRequestDTO category) {
+	                             @Valid @RequestBody CategoryRequestDTO category) {
 
 	    return service.updateCategory(id, category);
 	}

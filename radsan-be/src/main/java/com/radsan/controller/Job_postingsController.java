@@ -16,6 +16,8 @@ import com.radsan.dto.Job_postingsResponseDTO;
 import com.radsan.entity.Job_postings;
 import com.radsan.service.Job_postingsService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/job_postings")
 public class Job_postingsController {
@@ -36,12 +38,12 @@ public class Job_postingsController {
 	}
 	
 	@PostMapping
-	public Job_postingsResponseDTO createPosting(@RequestBody Job_postingsRequestDTO job_postings) {
+	public Job_postingsResponseDTO createPosting(@Valid @RequestBody Job_postingsRequestDTO job_postings) {
 		return jobPostingsService.createJobPostings(job_postings);
 	}
 	
 	@PutMapping("/{id}")
-	public Job_postingsResponseDTO updatePostings(@PathVariable Integer id, @RequestBody Job_postingsRequestDTO job_postings) {
+	public Job_postingsResponseDTO updatePostings(@PathVariable Integer id, @Valid @RequestBody Job_postingsRequestDTO job_postings) {
 		return jobPostingsService.updateJobPostings(id, job_postings);
 	}
 	

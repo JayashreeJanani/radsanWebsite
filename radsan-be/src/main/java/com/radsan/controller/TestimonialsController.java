@@ -16,6 +16,8 @@ import com.radsan.dto.TestimonialsResponseDTO;
 import com.radsan.entity.Testimonials;
 import com.radsan.service.TestimonialService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/testimonials")
 public class TestimonialsController {
@@ -41,7 +43,7 @@ public class TestimonialsController {
 	
 //for api: PUT /api/testimonials/{id}
 	@PutMapping("/{id}")
-	public TestimonialsResponseDTO updateTestimonials(@PathVariable Integer id,@RequestBody TestimonialsRequestDTO testimonials) {
+	public TestimonialsResponseDTO updateTestimonials(@PathVariable Integer id,@Valid @RequestBody TestimonialsRequestDTO testimonials) {
 		return testimonialService.updateTestimonials(id, testimonials);
 	}
 	

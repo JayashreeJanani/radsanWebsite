@@ -4,12 +4,26 @@ import java.math.BigDecimal;
 
 import com.radsan.entity.Category;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+
 public class ProductRequestDTO {
 	
+	@NotBlank(message = "category id cannot be empty")
 	private Integer categoryId;
+	
+	@NotBlank(message = "name cannot be empty")
 	private String name;
+	
+	@NotBlank(message = "description cannot be null")
 	private String description;
+	
+	@NotBlank(message = "price cannot be empty")
+	@PositiveOrZero(message = "price must be greater than 0")
 	private BigDecimal price;
+	
+	@NotNull(message = "It should be not null")
 	private Boolean isActive;
 	
 	public ProductRequestDTO() {}

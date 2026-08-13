@@ -1,12 +1,23 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 public class Job_ApplicationRequestDTO {
 	
-
+	@NotBlank(message ="Job ID cannot be empty")
 	private Integer job_id;
+	
+	@NotBlank(message="Applicant name cannot be empty")
 	private String applicant_name;
+	
+	@Email(message ="Email cannot be empty")
 	private String applicant_email;
+	
+	@NotBlank(message = "Resume cannot be empty")
 	private String resume_link;
+	
+	@NotBlank(message = "Cover letter cannot be empty")
 	private String cover_letter;
 	
 	public Job_ApplicationRequestDTO() {}

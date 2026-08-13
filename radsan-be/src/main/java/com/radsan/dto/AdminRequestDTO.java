@@ -1,11 +1,26 @@
 package com.radsan.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+
 public class AdminRequestDTO {
 	
-	
+	@NotBlank(message = "Username cannot be empty")
 	private String username;
+	
+	@NotBlank(message = "Email cannot be empty")
+	@Email
 	private String email;
+	
+	@Pattern(
+		    regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8,}$",
+		    message = "Password must contain uppercase, lowercase, number and special character"
+		)
 	private String password_hash;
+	
+	@NotNull(message = "Cannot be null should be true or false")
 	private Boolean is_active;
 	
 	public AdminRequestDTO() {}

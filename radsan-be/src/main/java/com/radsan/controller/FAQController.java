@@ -16,6 +16,8 @@ import com.radsan.dto.FAQResponseDTO;
 import com.radsan.entity.Faq;
 import com.radsan.service.FAQService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/faqs")
 public class FAQController {
@@ -38,13 +40,13 @@ public class FAQController {
 	}
 	//for api: POST /api/faqs
 	@PostMapping
-	public FAQResponseDTO createFaqs(@RequestBody FAQRequestDTO faqResponseDto) {
+	public FAQResponseDTO createFaqs(@Valid @RequestBody FAQRequestDTO faqResponseDto) {
 		return faqService.createFaq(faqResponseDto);
 	}
 	
 	//for api: PUT /api/faqs/{id}
 	@PutMapping("/{id}")
-	public FAQResponseDTO updateFaqs(@PathVariable Integer id, @RequestBody FAQRequestDTO faqRequestDto) {
+	public FAQResponseDTO updateFaqs(@PathVariable Integer id, @Valid @RequestBody FAQRequestDTO faqRequestDto) {
 		return faqService.updateFaq(id, faqRequestDto);
 	}
 	

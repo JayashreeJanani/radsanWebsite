@@ -16,6 +16,8 @@ import com.radsan.dto.AdminResponseDTO;
 import com.radsan.entity.Admin_users;
 import com.radsan.service.Admin_usersService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/admin_users")
 
@@ -39,12 +41,12 @@ public class Admin_usersController {
 	}
 	
 	@PostMapping
-	public AdminResponseDTO createAdmins(@RequestBody AdminRequestDTO admin_users) {
+	public AdminResponseDTO createAdmins(@Valid @RequestBody AdminRequestDTO admin_users) {
 		return adminService.createAdmin_users(admin_users);
 	}
 	
 	@PutMapping("/{id}")
-	public AdminResponseDTO updateAdmins(@PathVariable Integer id, @RequestBody AdminRequestDTO admin_users) {
+	public AdminResponseDTO updateAdmins(@PathVariable Integer id, @Valid @RequestBody AdminRequestDTO admin_users) {
 		return adminService.updateAdmin_users(id, admin_users);
 	}
 	

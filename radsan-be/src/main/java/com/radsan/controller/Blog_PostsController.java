@@ -16,6 +16,8 @@ import com.radsan.dto.Blog_postsResponseDTO;
 import com.radsan.entity.Blog_Posts;
 import com.radsan.service.Blog_PostsService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/blogs")
 public class Blog_PostsController {
@@ -36,12 +38,12 @@ public class Blog_PostsController {
 	
 	//for api: POST /api/blogs
 	@PostMapping
-	public Blog_postsResponseDTO createBlogs(@RequestBody Blog_postsRequestDTO blogPosts) {
+	public Blog_postsResponseDTO createBlogs(@Valid @RequestBody Blog_postsRequestDTO blogPosts) {
 		return blogService.createBlogs(blogPosts);
 	}
 	//for api: PUT /api/blogs/{id}
 	@PutMapping("/{id}")
-	public Blog_postsResponseDTO updateBlogs(@PathVariable Integer id, @RequestBody Blog_postsRequestDTO blogPosts) {
+	public Blog_postsResponseDTO updateBlogs(@Valid  @PathVariable Integer id, @RequestBody Blog_postsRequestDTO blogPosts) {
 		return blogService.updateBlogs(id, blogPosts);
 	}
 	//for api: DELETE /api/blogs/{id}
