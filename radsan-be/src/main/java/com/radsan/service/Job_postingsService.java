@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Job_postingsRequestDTO;
 import com.radsan.dto.Job_postingsResponseDTO;
 import com.radsan.entity.Job_postings;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.JobPostingsRepository;
 
 @Service
@@ -31,7 +32,7 @@ public class Job_postingsService {
 	
 	public Job_postingsResponseDTO getJobPostingsId(Integer id){
 		 Job_postings job_postings = jobPostingsRepository.findById(id)
-		            .orElseThrow(() -> new RuntimeException("Postings  not found with id: " + id));
+		            .orElseThrow(() -> new ResourceNotFoundException("Postings  not found with id: " + id));
 		 Job_postingsResponseDTO jobPostingsResponse = new Job_postingsResponseDTO();
 		 jobPostingsResponse.setId(job_postings.getId());
 		 jobPostingsResponse.setTitle(job_postings.getTitle());
@@ -66,7 +67,7 @@ public class Job_postingsService {
 	
 	public Job_postingsResponseDTO updateJobPostings(Integer id, Job_postingsRequestDTO updated_job_postings) {
 		Job_postings job_postings = jobPostingsRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Product not found with id: " +id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " +id));
 		job_postings.setTitle(updated_job_postings.getTitle());
 		job_postings.setDescription(updated_job_postings.getDescription());
 		job_postings.setIs_active(updated_job_postings.getIs_active());
@@ -88,7 +89,7 @@ public class Job_postingsService {
 	
 	public void deletePostings(Integer id) {
 		Job_postings job_postings = jobPostingsRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Product not found with id: "+ id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: "+ id));
 		jobPostingsRepository.delete(job_postings);
 	}
 

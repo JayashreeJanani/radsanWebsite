@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.IndustryRequestDTO;
 import com.radsan.dto.IndustryResponseDTO;
 import com.radsan.entity.Industry;
-
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.IndustryRepository;
 
 @Service
@@ -31,7 +31,7 @@ public class IndustryService {
 //for API: GET /api/industries/{id}
 	public IndustryResponseDTO getIndustryById(Integer id) {
 	    Industry industry =  irRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Industry not found with id: " + id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Industry not found with id: " + id));
 	    IndustryResponseDTO industryResponseDto = new IndustryResponseDTO();
 	    industryResponseDto.setId(industry.getId());
 	    industryResponseDto.setName(industry.getName());
@@ -59,7 +59,7 @@ public class IndustryService {
 
 	    Industry industry = irRepository.findById(id)
 	    		.orElseThrow(() ->
-	    	    new RuntimeException("Industry not found with id: " + id));
+	    	    new ResourceNotFoundException("Industry not found with id: " + id));
 	    industry.setName(updatedIndustryDTO.getName());
 	    industry.setDescription(updatedIndustryDTO.getDescription());
 	   

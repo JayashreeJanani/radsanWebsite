@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.TestimonialsRequestDTO;
 import com.radsan.dto.TestimonialsResponseDTO;
 import com.radsan.entity.Testimonials;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.TestimonialsRepository;
 @Service
 public class TestimonialService {
@@ -26,7 +27,7 @@ public class TestimonialService {
 	
 //for api: GET /api/testimonials
 	public TestimonialsResponseDTO getTestimonialById(Integer id) {
-		Testimonials testimonials =  testimonialRepository.findById(id).orElseThrow(() -> new RuntimeException("Testimonial not found with id: " + id));
+		Testimonials testimonials =  testimonialRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Testimonial not found with id: " + id));
 		TestimonialsResponseDTO testimonialsResponseDto = new TestimonialsResponseDTO();
 		testimonialsResponseDto.setId(testimonials.getId());
 		testimonialsResponseDto.setClient_name(testimonials.getClient_name());
@@ -57,7 +58,7 @@ public class TestimonialService {
 
 	//for api: PUT /api/testimonials/{id}
 	public TestimonialsResponseDTO updateTestimonials(Integer id, TestimonialsRequestDTO updatedTestimonials) {
-		Testimonials testimonials = testimonialRepository.findById(id).orElseThrow(() -> new RuntimeException("Testimonial not found"));
+		Testimonials testimonials = testimonialRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Testimonial not found"));
 		testimonials.setClient_name(updatedTestimonials.getClient_name());
 		testimonials.setCompany(updatedTestimonials.getCompany());
 		testimonials.setFeedback(updatedTestimonials.getFeedback());

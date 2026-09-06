@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.AdminRequestDTO;
 import com.radsan.dto.AdminResponseDTO;
 import com.radsan.entity.Admin_users;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Admin_usersRepository;
 
 @Service
@@ -33,7 +34,7 @@ public class Admin_usersService {
 	//for api: GET /api/admin_users/{id}
 	public AdminResponseDTO getAdminUsersById(Integer id) {
 		Admin_users admins =  adminRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Admin not found in id" +id));
+				.orElseThrow(() -> new ResourceNotFoundException("Admin not found in id" +id));
 		AdminResponseDTO admResponseDTO = new AdminResponseDTO();
 		
 		admResponseDTO.setId(admins.getId());
@@ -71,7 +72,7 @@ public class Admin_usersService {
 	
 	public AdminResponseDTO updateAdmin_users(Integer id, AdminRequestDTO updatedAdminUsers) {
 		Admin_users admin_users = adminRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Admin not found in id" +id));
+				.orElseThrow(() -> new ResourceNotFoundException("Admin not found in id" +id));
 		admin_users.setUsername(updatedAdminUsers.getUsername());
 		admin_users.setEmail(updatedAdminUsers.getEmail());
 		admin_users.setPassword_hash(updatedAdminUsers.getPassword_hash());

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Contact_submissionsRequestDTO;
 import com.radsan.dto.Contact_submissionsResponseDTO;
 import com.radsan.entity.Contact_submissions;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Contact_submissionsRepository;
 
 @Service
@@ -33,7 +34,7 @@ public class Contact_submissionsService {
 	//for api: GET /api/contacts/{id}
 	public Contact_submissionsResponseDTO getContactsById(Integer id) {
 		Contact_submissions contact =  contactRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Blog not found with id: " + id));
+				.orElseThrow(() -> new ResourceNotFoundException("Blog not found with id: " + id));
 		Contact_submissionsResponseDTO contactResponseDto = new Contact_submissionsResponseDTO();
 		contactResponseDto.setId(contact.getId());
 		contactResponseDto.setName(contact.getName());

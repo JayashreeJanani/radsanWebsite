@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Blog_postsRequestDTO;
 import com.radsan.dto.Blog_postsResponseDTO;
 import com.radsan.entity.Blog_Posts;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Blog_PostsRepository;
 
 @Service
@@ -34,7 +35,7 @@ public class Blog_PostsService {
 //for api: GET /api/blogs/{id}
 	public Blog_postsResponseDTO getBlogById(Integer id) {
 	    Blog_Posts blogs = blogRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Blog not found with id: " + id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Blog not found with id: " + id));
 	    Blog_postsResponseDTO blogResponseDTO = new Blog_postsResponseDTO();
 	    blogResponseDTO.setId(blogs.getId());
 	    blogResponseDTO.setTitle(blogs.getTitle());
@@ -73,7 +74,7 @@ public class Blog_PostsService {
 //for api: PUT /api/blogs/{id}
 	public Blog_postsResponseDTO updateBlogs(Integer id,Blog_postsRequestDTO updatedBlogs) {
 		Blog_Posts blog_posts = blogRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Blog not found"));
+				.orElseThrow(() -> new ResourceNotFoundException("Blog not found"));
 		blog_posts.setTitle(blog_posts.getTitle());
 		blog_posts.setSlug(blog_posts.getSlug());
 		blog_posts.setContent(blog_posts.getContent());

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.FAQRequestDTO;
 import com.radsan.dto.FAQResponseDTO;
 import com.radsan.entity.Faq;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.FaqRepository;
 
 @Service
@@ -52,7 +53,7 @@ public class FAQService {
 	//for api: GET /api/faqs/{id}
 	public FAQResponseDTO getFaqById(Integer id) {
 		Faq faq = faqRepository.findById(id)	    		
-	            .orElseThrow(() -> new RuntimeException("Faq not found with id: " + id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Faq not found with id: " + id));
 	            
 	            FAQResponseDTO faqResponseDto = new FAQResponseDTO();
 	            faqResponseDto.setId(faq.getId());
@@ -84,7 +85,7 @@ public class FAQService {
 	//for api: PUT /api/faqs/{id}
 	public FAQResponseDTO	updateFaq(Integer id, FAQRequestDTO faqRequestDto) {
 		Faq faq = faqRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Faq not found with id: " + id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Faq not found with id: " + id));
 		faq.setQuestion(faqRequestDto.getQuestion());
 		faq.setAnswer(faqRequestDto.getAnswer());
 		Faq updatedFaq =  faqRepository.save(faq);

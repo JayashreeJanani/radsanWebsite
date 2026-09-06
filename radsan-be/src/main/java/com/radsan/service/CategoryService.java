@@ -3,6 +3,7 @@ package com.radsan.service;
 import com.radsan.dto.CategoryRequestDTO;
 import com.radsan.dto.CategoryResponseDTO;
 import com.radsan.entity.Category;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.CategoryRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -28,7 +29,7 @@ public class CategoryService {
 //for API GET /api/categories/{id}
 	public CategoryResponseDTO getProductById(Integer id) {
 		Category category = categoryRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Category not found with id: " + id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Category not found with id: " + id));
 		
 		CategoryResponseDTO categoryResponseDTO = new CategoryResponseDTO();
 		
@@ -58,7 +59,7 @@ public class CategoryService {
 	public CategoryResponseDTO updateCategory(Integer id, CategoryRequestDTO updatedCategory) {
 
 	    Category category = categoryRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Category not found"));
+	            .orElseThrow(() -> new ResourceNotFoundException("Category not found with id: " + id));
 	    category.setName(updatedCategory.getName());
 	    category.setDescription(updatedCategory.getDescription());
 
@@ -76,7 +77,7 @@ public class CategoryService {
 	public void deleteCategory(Integer id) {
 
 	    Category category = categoryRepository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Category not found"));
+	            .orElseThrow(() -> new ResourceNotFoundException("Category not found with id: " + id));
 
 	    categoryRepository.delete(category);
 	}

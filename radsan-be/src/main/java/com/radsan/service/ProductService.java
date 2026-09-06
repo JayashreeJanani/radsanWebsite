@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.ProductRequestDTO;
 import com.radsan.dto.ProductResponseDTO;
 import com.radsan.entity.Product;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.entity.Category;
 import com.radsan.respository.CategoryRepository;
 import com.radsan.respository.ProductRepository;
@@ -34,7 +35,7 @@ public class ProductService {
 	}
 	public ProductResponseDTO getProductById(Integer id) {
 	    Product products = repository.findById(id)
-	            .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+	            .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + id));
 	    ProductResponseDTO productResponseDTO = new ProductResponseDTO();
 	    productResponseDTO.setId(products.getId());
 	    productResponseDTO.setCategoryId(products.getCategory().getId());
@@ -54,7 +55,7 @@ public class ProductService {
 		Category category = categoryRepository
 	            .findById(productRequestDTO.getCategoryId())
 	            .orElseThrow(() ->
-	                    new RuntimeException(
+	                    new ResourceNotFoundException(
 	                            "Category not found with id: "
 	                            + productRequestDTO.getCategoryId()
 	                    ));
@@ -89,7 +90,7 @@ public class ProductService {
 
 	    Product product = repository.findById(id)
 	            .orElseThrow(() ->
-	                    new RuntimeException(
+	                    new ResourceNotFoundException(
 	                            "Product not found with id: " + id
 	                    ));
 

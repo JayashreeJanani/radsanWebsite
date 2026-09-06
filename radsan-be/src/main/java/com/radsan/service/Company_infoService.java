@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Company_infoRequestDTO;
 import com.radsan.dto.Company_infoResponseDTO;
 import com.radsan.entity.Company_info;
+import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Company_infoRepository;
 
 @Service
@@ -31,7 +32,7 @@ public class Company_infoService {
 	// for api:GET /api/company_info/{id}
 	public Company_infoResponseDTO getCompanyInfoById(Integer id){
 		Company_info company_info =  companyInfoRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Blog not found with id: " + id));
+				.orElseThrow(() -> new ResourceNotFoundException("Blog not found with id: " + id));
 		Company_infoResponseDTO companyResponseDto = new Company_infoResponseDTO();
 		companyResponseDto.setId(company_info.getId());
 		companyResponseDto.setName(company_info.getName());
@@ -69,7 +70,7 @@ public class Company_infoService {
 	//for api: PUT /api/company_info/{id}
 	public Company_infoResponseDTO updateCompanyInfo(Integer id, Company_infoRequestDTO updatedCompanyInfo) {
 		Company_info company_info = companyInfoRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Company not found"));
+				.orElseThrow(() -> new ResourceNotFoundException("Company not found"));
 		company_info.setName(updatedCompanyInfo.getName());
 		company_info.setAddress(updatedCompanyInfo.getAddress());
 		company_info.setPhone(updatedCompanyInfo.getPhone());
