@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Contact_submissionsRequestDTO;
 import com.radsan.dto.Contact_submissionsResponseDTO;
 import com.radsan.entity.Contact_submissions;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Contact_submissionsRepository;
 
@@ -48,6 +49,14 @@ public class Contact_submissionsService {
 	
 	//for api: POST /api/contacts
 	public Contact_submissionsResponseDTO createContacts(Contact_submissionsRequestDTO contactRequestSubmissionsDTO) {
+		
+		if (contactRepository.existsByName(contactRequestSubmissionsDTO.getName())) {
+		    throw new ResourceAlreadyExistsException(
+		        "This contact already exists with name: "
+		        + contactRequestSubmissionsDTO.getName()
+		    );
+		}
+		
 		Contact_submissions contactSubmissions = new Contact_submissions();
 		contactSubmissions.setName(contactRequestSubmissionsDTO.getName());
 		contactSubmissions.setEmail(contactRequestSubmissionsDTO.getEmail());

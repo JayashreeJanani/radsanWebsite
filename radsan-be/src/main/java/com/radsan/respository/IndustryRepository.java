@@ -8,6 +8,7 @@ import com.radsan.entity.Industry;
 
 public interface IndustryRepository extends JpaRepository<Industry,Integer> {
 	
+	boolean existsByName(String name);
 
 }
 

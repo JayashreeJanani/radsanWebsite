@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.FAQRequestDTO;
 import com.radsan.dto.FAQResponseDTO;
 import com.radsan.entity.Faq;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.FaqRepository;
 
@@ -65,6 +66,14 @@ public class FAQService {
 	
 	//for api: POST /api/faqs
 	public FAQResponseDTO createFaq(FAQRequestDTO faqRequestDto) {
+		
+		if (faqRepository.existsByQuestion(faqRequestDto.getQuestion())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Faqs already exists with name: "
+		        + faqRequestDto.getQuestion()
+		    );
+		}
+		
 		Faq faq = new Faq();
 		
 		faq.setQuestion(faqRequestDto.getQuestion());

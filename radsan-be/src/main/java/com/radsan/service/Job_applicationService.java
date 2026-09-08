@@ -8,6 +8,8 @@ import com.radsan.dto.Job_ApplicationRequestDTO;
 import com.radsan.dto.Job_ApplicationResponseDTO;
 import com.radsan.entity.Job_application;
 import com.radsan.entity.Job_postings;
+import com.radsan.exception.BadRequestException;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.JobApplicationRepository;
 import com.radsan.respository.JobPostingsRepository;
@@ -52,12 +54,31 @@ public class Job_applicationService {
 	
 	//for api: POST /api/job_applications
 	public Job_ApplicationResponseDTO createJobApplications(Job_ApplicationRequestDTO job_applicationRequestDTO) {
+		if (jobApplicationRepository.existsByJobAndEmail(
+		        job_applicationRequestDTO.getJob_id(),
+		        job_applicationRequestDTO.getApplicant_email())) {
+
+		    throw new ResourceAlreadyExistsException(
+		        "Application already exists for this job and email"
+		    );
+		}
+		
+	    // 2. Check business rule HERE
+	   
+
 		Job_postings job_postings =  jobPostingsRepository.findById(job_applicationRequestDTO.getJob_id())
 	            .orElseThrow(() ->
                 new ResourceNotFoundException(
                         "Job Application not found with id: "
                         + job_applicationRequestDTO.getJob_id()
                 ));
+		
+		 if (!job_postings.getIs_active()) {
+		        throw new BadRequestException(
+		            "Cannot apply for an inactive job"
+		        );
+		    }
+		
 		Job_application job_application = new Job_application();
 		
 		job_application.setJob_postings(job_postings);

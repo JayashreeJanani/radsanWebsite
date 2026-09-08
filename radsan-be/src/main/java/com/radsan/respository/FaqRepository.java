@@ -8,4 +8,5 @@ import com.radsan.entity.Faq;
 
 public interface FaqRepository extends JpaRepository<Faq,Integer> {
 
+	boolean existsByQuestion(String question);
 }

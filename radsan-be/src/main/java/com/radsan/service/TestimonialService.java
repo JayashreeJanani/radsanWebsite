@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.TestimonialsRequestDTO;
 import com.radsan.dto.TestimonialsResponseDTO;
 import com.radsan.entity.Testimonials;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.TestimonialsRepository;
 @Service
@@ -39,6 +40,10 @@ public class TestimonialService {
 	
 // for api: POST /api/testimonials
 	public TestimonialsResponseDTO createTestimonials(TestimonialsRequestDTO testimonialsRequestDTO) {
+		
+
+		
+		
 		Testimonials testimonials = new Testimonials();
 		testimonials.setClient_name(testimonialsRequestDTO.getClient_name());
 		testimonials.setCompany(testimonialsRequestDTO.getCompany());

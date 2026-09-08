@@ -7,5 +7,6 @@ import com.radsan.entity.Blog_Posts;
 
 
 public interface Blog_PostsRepository extends JpaRepository<Blog_Posts,Integer> {
-
+	
+	boolean existsBySlug(String slug);
 }

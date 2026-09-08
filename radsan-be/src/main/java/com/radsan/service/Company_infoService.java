@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Company_infoRequestDTO;
 import com.radsan.dto.Company_infoResponseDTO;
 import com.radsan.entity.Company_info;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Company_infoRepository;
 
@@ -48,6 +49,12 @@ public class Company_infoService {
 	//for api:POST /api/company_info
 	public Company_infoResponseDTO createCompanyInfo(Company_infoRequestDTO company_infoRequestDto) {
 		
+		if (companyInfoRepository.existsByName(company_infoRequestDto.getName())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Company already exists with name: "
+		        + company_infoRequestDto.getName()
+		    );
+		}
 		
 		Company_info company = new Company_info();
 		company.setName(company_infoRequestDto.getName());

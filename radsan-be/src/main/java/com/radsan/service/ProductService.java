@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.ProductRequestDTO;
 import com.radsan.dto.ProductResponseDTO;
 import com.radsan.entity.Product;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.entity.Category;
 import com.radsan.respository.CategoryRepository;
@@ -52,6 +53,13 @@ public class ProductService {
 	}
 	//for api POST /api/products
 	public ProductResponseDTO createProduct(ProductRequestDTO productRequestDTO) {
+		
+		if (repository.existsByName(productRequestDTO.getName())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Product already exists with name: "
+		        + productRequestDTO.getName()
+		    );
+		}
 		Category category = categoryRepository
 	            .findById(productRequestDTO.getCategoryId())
 	            .orElseThrow(() ->

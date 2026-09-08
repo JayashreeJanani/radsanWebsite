@@ -6,4 +6,5 @@ import com.radsan.entity.Company_info;
 
 public interface Company_infoRepository extends JpaRepository<Company_info,Integer> {
 
+	boolean existsByName(String name);
 }

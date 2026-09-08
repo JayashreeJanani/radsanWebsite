@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.Blog_postsRequestDTO;
 import com.radsan.dto.Blog_postsResponseDTO;
 import com.radsan.entity.Blog_Posts;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Blog_PostsRepository;
 
@@ -48,6 +49,14 @@ public class Blog_PostsService {
 	}
 //for api: POST /api/blogs
 	public Blog_postsResponseDTO createBlogs(Blog_postsRequestDTO blogPostsRequestDTO) {
+		
+		if (blogRepository.existsBySlug(blogPostsRequestDTO.getSlug())) {
+	        throw new ResourceAlreadyExistsException(
+	                "Blog already exists with slug: "
+	                + blogPostsRequestDTO.getSlug()
+	        );
+	    }
+		
 		Blog_Posts blog_posts = new Blog_Posts();
 		blog_posts.setTitle(blogPostsRequestDTO.getTitle());
 		blog_posts.setSlug(blogPostsRequestDTO.getSlug());

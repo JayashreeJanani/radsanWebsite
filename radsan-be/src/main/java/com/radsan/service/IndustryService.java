@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.IndustryRequestDTO;
 import com.radsan.dto.IndustryResponseDTO;
 import com.radsan.entity.Industry;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.IndustryRepository;
 
@@ -41,6 +42,13 @@ public class IndustryService {
 	}
 	//for api POST /api/industries
 	public IndustryResponseDTO createIndustry(IndustryRequestDTO industryRequestDTO) {
+		
+		if (irRepository.existsByName(industryRequestDTO.getName())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Industry already exists with name: "
+		        + industryRequestDTO.getName()
+		    );
+		}
 		Industry industry = new Industry();
 		industry.setName(industryRequestDTO.getName());
 		industry.setDescription(industryRequestDTO.getDescription());

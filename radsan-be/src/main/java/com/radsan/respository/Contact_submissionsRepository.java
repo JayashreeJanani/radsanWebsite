@@ -6,4 +6,5 @@ import com.radsan.entity.Contact_submissions;
 
 public interface Contact_submissionsRepository extends JpaRepository<Contact_submissions, Integer> {
 
+	boolean existsByName(String name);
 }

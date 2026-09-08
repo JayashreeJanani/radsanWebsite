@@ -3,6 +3,7 @@ package com.radsan.service;
 import com.radsan.dto.CategoryRequestDTO;
 import com.radsan.dto.CategoryResponseDTO;
 import com.radsan.entity.Category;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.CategoryRepository;
 import org.springframework.stereotype.Service;
@@ -42,6 +43,13 @@ public class CategoryService {
 
 //for API POST /api/categories
 	public CategoryResponseDTO createCategory(CategoryRequestDTO categoryRequestDTO) {
+		
+		if (categoryRepository.existsByName(categoryRequestDTO.getName())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Category already exists with name: "
+		        + categoryRequestDTO.getName()
+		    );
+		}
 		Category category = new Category();
 		category.setName(categoryRequestDTO.getName());
 		category.setDescription(categoryRequestDTO.getDescription());

@@ -6,4 +6,5 @@ import com.radsan.entity.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
+	boolean existsByName(String name);
 }

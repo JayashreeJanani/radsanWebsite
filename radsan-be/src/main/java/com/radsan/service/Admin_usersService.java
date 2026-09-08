@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.radsan.dto.AdminRequestDTO;
 import com.radsan.dto.AdminResponseDTO;
 import com.radsan.entity.Admin_users;
+import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Admin_usersRepository;
 
@@ -49,6 +50,18 @@ public class Admin_usersService {
 	//for api: POST /api/admin_users
 	public AdminResponseDTO createAdmin_users(AdminRequestDTO adminRequestDTO) {
 
+		if (adminRepository.existsByEmail(adminRequestDTO.getEmail())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Admin already exists with email: " + adminRequestDTO.getEmail()
+		    );
+		}
+
+		if (adminRepository.existsByUsername(adminRequestDTO.getUsername())) {
+		    throw new ResourceAlreadyExistsException(
+		        "Admin already exists with username: " + adminRequestDTO.getUsername()
+		    );
+		}
+		
 	    Admin_users admins = new Admin_users();
 
 	    admins.setUsername(adminRequestDTO.getUsername());

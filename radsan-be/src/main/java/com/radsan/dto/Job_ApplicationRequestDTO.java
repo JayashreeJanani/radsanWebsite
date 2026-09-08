@@ -2,10 +2,13 @@ package com.radsan.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 public class Job_ApplicationRequestDTO {
 	
-	@NotBlank(message ="Job ID cannot be empty")
+	@NotNull(message = "Job ID is required")
+	@Positive(message = "Job ID must be greater than 0")
 	private Integer job_id;
 	
 	@NotBlank(message="Applicant name cannot be empty")

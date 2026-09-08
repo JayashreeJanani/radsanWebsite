@@ -6,11 +6,13 @@ import com.radsan.entity.Category;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
 public class ProductRequestDTO {
 	
-	@NotBlank(message = "category id cannot be empty")
+	@NotNull(message = "Category is required")
+	@Positive(message = "Category ID must be greater than 0")
 	private Integer categoryId;
 	
 	@NotBlank(message = "name cannot be empty")
@@ -19,8 +21,8 @@ public class ProductRequestDTO {
 	@NotBlank(message = "description cannot be null")
 	private String description;
 	
-	@NotBlank(message = "price cannot be empty")
-	@PositiveOrZero(message = "price must be greater than 0")
+	@NotNull(message = "Price is required")
+	@Positive(message = "Price must be greater than 0")
 	private BigDecimal price;
 	
 	@NotNull(message = "It should be not null")
