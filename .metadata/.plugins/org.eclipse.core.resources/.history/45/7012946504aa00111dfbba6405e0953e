@@ -1,0 +1,98 @@
+package com.radsan.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.radsan.dto.TestimonialsRequestDTO;
+import com.radsan.dto.TestimonialsResponseDTO;
+import com.radsan.entity.Testimonials;
+import com.radsan.exception.ResourceAlreadyExistsException;
+import com.radsan.exception.ResourceNotFoundException;
+import com.radsan.respository.TestimonialsRepository;
+@Service
+public class TestimonialService {
+	private TestimonialsRepository testimonialRepository;
+	public TestimonialService(TestimonialsRepository testimonialRepository) {
+		this.testimonialRepository = testimonialRepository;
+	}
+//for api: GET /api/testimonials	
+	public List<TestimonialsResponseDTO> getAllTestimonials(){
+		return testimonialRepository.findAll()
+				.stream()
+				.map(testimonials -> new TestimonialsResponseDTO(testimonials.getId(),
+						testimonials.getClient_name(),
+						testimonials.getCompany(),
+						testimonials.getFeedback())).toList();
+		}
+	
+//for api: GET /api/testimonials
+	public TestimonialsResponseDTO getTestimonialById(Integer id) {
+		Testimonials testimonials =  testimonialRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Testimonial not found with id: " + id));
+		TestimonialsResponseDTO testimonialsResponseDto = new TestimonialsResponseDTO();
+		testimonialsResponseDto.setId(testimonials.getId());
+		testimonialsResponseDto.setClient_name(testimonials.getClient_name());
+		testimonialsResponseDto.setCompany(testimonials.getCompany());
+		testimonialsResponseDto.setFeedback(testimonials.getFeedback());
+		
+		return testimonialsResponseDto;
+	}
+	
+// for api: POST /api/testimonials
+	public TestimonialsResponseDTO createTestimonials(TestimonialsRequestDTO testimonialsRequestDTO) {
+		
+		if (testimonialRepository.existsByClient_name(
+		        testimonialsRequestDTO.getClient_name())) {
+
+		    throw new ResourceAlreadyExistsException(
+		        "Testimonial already exists for client: "
+		        + testimonialsRequestDTO.getClient_name()
+		    );
+		}
+		
+		
+		Testimonials testimonials = new Testimonials();
+		testimonials.setClient_name(testimonialsRequestDTO.getClient_name());
+		testimonials.setCompany(testimonialsRequestDTO.getCompany());
+		testimonials.setFeedback(testimonialsRequestDTO.getFeedback());
+		
+		Testimonials savedTestimonials = testimonialRepository.save(testimonials);
+		TestimonialsResponseDTO testimonialsResponseDTO = new TestimonialsResponseDTO();
+		
+		testimonialsResponseDTO.setId(savedTestimonials.getId());
+		testimonialsResponseDTO.setClient_name(savedTestimonials.getClient_name());
+		testimonialsResponseDTO.setCompany(savedTestimonials.getCompany());
+		testimonialsResponseDTO.setFeedback(savedTestimonials.getFeedback());
+		
+		return testimonialsResponseDTO;
+		
+	}
+
+	//for api: PUT /api/testimonials/{id}
+	public TestimonialsResponseDTO updateTestimonials(Integer id, TestimonialsRequestDTO updatedTestimonials) {
+		Testimonials testimonials = testimonialRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Testimonial not found"));
+		testimonials.setClient_name(updatedTestimonials.getClient_name());
+		testimonials.setCompany(updatedTestimonials.getCompany());
+		testimonials.setFeedback(updatedTestimonials.getFeedback());
+		
+		Testimonials updatedTestimonial =  testimonialRepository.save(testimonials);
+		TestimonialsResponseDTO testimonialsResponseDTO = new TestimonialsResponseDTO();
+		
+		testimonialsResponseDTO.setId(updatedTestimonial.getId());
+		testimonialsResponseDTO.setClient_name(updatedTestimonial.getClient_name());
+		testimonialsResponseDTO.setCompany(updatedTestimonial.getCompany());
+		testimonialsResponseDTO.setFeedback(updatedTestimonial.getFeedback());
+		
+		return testimonialsResponseDTO;
+		
+		
+	}
+	
+	//for api: DELETE /api/testimonials/{id}
+	public void deleteTestimonials(Integer id) {
+		Testimonials testimonials = testimonialRepository.findById(id)
+				.orElseThrow(() -> new RuntimeException("Testimonial not found"));
+		testimonialRepository.delete(testimonials);
+	}
+
+}

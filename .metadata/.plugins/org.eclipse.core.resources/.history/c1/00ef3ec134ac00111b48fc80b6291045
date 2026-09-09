@@ -1,0 +1,27 @@
+package com.radsan.security;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+/*
+ * Primary goal here:
+ * ->generate token
+->validate token
+->extract email from token*/
+//One important architecture distinction:
+//
+//SecurityConfig
+//→ tells Spring HOW requests are secured
+//
+//JwtService
+//→ creates and reads JWT tokens
+@Service
+public class JwtService {
+
+    @Value("${jwt.secret}")
+    private String secretKey;
+
+    @Value("${jwt.expiration}")
+    private long expiration;
+
+}

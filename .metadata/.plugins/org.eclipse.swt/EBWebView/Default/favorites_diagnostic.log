@@ -1,0 +1,338 @@
+2026-06-26 15:36:06.370: [INFO] OnDoneLoading sync enabled: 0
+2026-07-01 20:12:39.781: [INFO] OnDoneLoading sync enabled: 0
+2026-07-01 20:12:40.439: [INFO] OnDoneLoading sync enabled: 0
+2026-07-01 20:22:17.046: [INFO] OnDoneLoading sync enabled: 0
+2026-08-01 21:58:31.228: [INFO] OnDoneLoading sync enabled: 0
+2026-08-01 22:05:43.125: [INFO] OnDoneLoading sync enabled: 0
+2026-08-01 22:09:30.757: [INFO] OnDoneLoading sync enabled: 0
+2026-08-02 21:58:59.637: [INFO] OnDoneLoading sync enabled: 0
+2026-08-02 22:01:52.118: [INFO] OnDoneLoading sync enabled: 0
+2026-08-02 22:03:22.293: [INFO] OnDoneLoading sync enabled: 0
+2026-08-03 17:17:16.596: [INFO] OnDoneLoading sync enabled: 0
+2026-08-04 12:33:13.524: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 16:55:19.727: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 16:55:28.459: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 16:56:14.487: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 23:34:11.927: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 23:37:19.208: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 23:46:00.182: [INFO] OnDoneLoading sync enabled: 0
+2026-08-08 23:37:01.733: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-08 23:37:01.733: [INFO] Profiles total count: 1
+2026-08-08 23:37:01.734: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-08 23:37:01.734: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-08 23:37:01.734: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-08 23:37:01.734: [INFO] OnDoneLoading sync enabled: 0
+2026-08-08 23:37:01.734: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-08 23:37:01.734: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-08 23:37:01.734: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-08 23:37:03.579: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-08 23:56:39.252: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-08 23:56:39.252: [INFO] Profiles total count: 1
+2026-08-08 23:56:39.252: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-08 23:56:39.252: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-08 23:56:39.252: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-08 23:56:39.252: [INFO] OnDoneLoading sync enabled: 0
+2026-08-08 23:56:39.252: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-08 23:56:39.252: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-08 23:56:39.252: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-09 17:05:25.962: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-09 17:34:25.782: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-09 17:34:25.782: [INFO] Profiles total count: 1
+2026-08-09 17:34:25.782: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-09 17:34:25.782: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-09 17:34:25.782: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-09 17:34:25.782: [INFO] OnDoneLoading sync enabled: 0
+2026-08-09 17:34:25.782: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-09 17:34:25.782: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-09 17:34:25.782: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-10 01:11:55.394: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:25:52.960: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:25:52.960: [INFO] Profiles total count: 1
+2026-08-11 11:25:52.960: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:25:52.960: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:25:52.961: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:25:52.961: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 11:25:52.961: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 11:25:52.961: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 11:25:52.961: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:28:59.264: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:30:34.902: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:30:34.902: [INFO] Profiles total count: 1
+2026-08-11 11:30:34.902: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:30:34.902: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:30:34.902: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:30:34.902: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 11:30:34.902: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 11:30:34.902: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 11:30:34.902: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:30:51.058: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:34:15.853: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:34:15.853: [INFO] Profiles total count: 1
+2026-08-11 11:34:15.854: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:34:15.854: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:34:15.854: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:34:15.854: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 11:34:15.854: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 11:34:15.854: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 11:34:15.854: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:34:34.025: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:34:43.508: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:34:43.508: [INFO] Profiles total count: 1
+2026-08-11 11:34:43.508: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:34:43.508: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 11:34:43.508: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 11:34:43.509: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 11:34:43.509: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 11:34:43.509: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 11:34:43.509: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 11:34:51.950: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:07:48.012: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:07:48.012: [INFO] Profiles total count: 1
+2026-08-11 12:07:48.012: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:07:48.012: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:07:48.013: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:07:48.013: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 12:07:48.013: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 12:07:48.013: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 12:07:48.013: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:10:30.124: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:10:38.526: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:10:38.526: [INFO] Profiles total count: 1
+2026-08-11 12:10:38.526: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:10:38.526: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:10:38.527: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:10:38.527: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 12:10:38.527: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 12:10:38.527: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 12:10:38.527: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:10:47.277: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:12:33.966: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:12:33.967: [INFO] Profiles total count: 1
+2026-08-11 12:12:33.967: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:12:33.967: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:12:33.967: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:12:33.967: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 12:12:33.967: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 12:12:33.967: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 12:12:33.967: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:12:53.900: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:13:03.085: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:13:03.085: [INFO] Profiles total count: 1
+2026-08-11 12:13:03.086: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:13:03.086: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:13:03.086: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:13:03.086: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 12:13:03.086: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 12:13:03.086: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 12:13:03.086: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:13:13.026: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:13:25.449: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:13:25.449: [INFO] Profiles total count: 1
+2026-08-11 12:13:25.450: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:13:25.450: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:13:25.450: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:13:25.450: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 12:13:25.450: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 12:13:25.450: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 12:13:25.450: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:13:37.442: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 12:14:17.372: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:14:17.372: [INFO] Profiles total count: 1
+2026-08-11 12:14:17.373: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:14:17.373: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 12:14:17.373: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 12:14:17.373: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 12:14:17.373: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 12:14:17.373: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 12:14:17.373: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:06:22.859: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:06:23.859: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:06:23.859: [INFO] Profiles total count: 1
+2026-08-11 13:06:23.860: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:06:23.860: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:06:23.860: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:06:23.860: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 13:06:23.860: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 13:06:23.860: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 13:06:23.860: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:13:39.802: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:13:56.963: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:13:56.963: [INFO] Profiles total count: 1
+2026-08-11 13:13:56.963: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:13:56.963: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:13:56.963: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:13:56.963: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 13:13:56.963: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 13:13:56.963: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 13:13:56.963: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:29:04.143: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:29:15.002: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:29:15.002: [INFO] Profiles total count: 1
+2026-08-11 13:29:15.002: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:29:15.002: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:29:15.002: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:29:15.002: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 13:29:15.002: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 13:29:15.002: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 13:29:15.002: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:40:28.284: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:52:17.703: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:52:17.703: [INFO] Profiles total count: 1
+2026-08-11 13:52:17.704: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:52:17.704: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:52:17.704: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:52:17.704: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 13:52:17.704: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 13:52:17.704: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 13:52:17.704: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:54:09.709: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 13:55:10.210: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:55:10.210: [INFO] Profiles total count: 1
+2026-08-11 13:55:10.211: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:55:10.211: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 13:55:10.211: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 13:55:10.211: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 13:55:10.211: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 13:55:10.211: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 13:55:10.211: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 14:51:11.381: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 14:51:59.463: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 14:51:59.463: [INFO] Profiles total count: 1
+2026-08-11 14:51:59.463: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 14:51:59.463: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 14:51:59.463: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 14:51:59.463: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 14:51:59.463: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 14:51:59.463: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 14:51:59.463: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 14:52:07.640: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 16:21:57.121: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 16:21:57.121: [INFO] Profiles total count: 1
+2026-08-11 16:21:57.121: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 16:21:57.121: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 16:21:57.121: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 16:21:57.121: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 16:21:57.121: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 16:21:57.121: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 16:21:57.121: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 18:34:39.065: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 18:40:46.845: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 18:40:46.845: [INFO] Profiles total count: 1
+2026-08-11 18:40:46.845: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 18:40:46.845: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 18:40:46.845: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 18:40:46.845: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 18:40:46.845: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 18:40:46.845: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 18:40:46.845: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 21:37:51.254: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 21:47:13.524: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 21:47:13.524: [INFO] Profiles total count: 1
+2026-08-11 21:47:13.524: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 21:47:13.524: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 21:47:13.524: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 21:47:13.524: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 21:47:13.524: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 21:47:13.524: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 21:47:13.524: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 22:34:36.603: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-11 22:39:45.871: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 22:39:45.871: [INFO] Profiles total count: 1
+2026-08-11 22:39:45.871: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 22:39:45.871: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-11 22:39:45.871: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-11 22:39:45.871: [INFO] OnDoneLoading sync enabled: 0
+2026-08-11 22:39:45.871: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-11 22:39:45.871: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-11 22:39:45.871: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-12 10:53:22.809: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-12 10:59:29.035: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-12 10:59:29.035: [INFO] Profiles total count: 1
+2026-08-12 10:59:29.035: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-12 10:59:29.035: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-12 10:59:29.035: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-12 10:59:29.035: [INFO] OnDoneLoading sync enabled: 0
+2026-08-12 10:59:29.035: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-12 10:59:29.035: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-12 10:59:29.035: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-13 06:45:16.164: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-13 18:08:35.668: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-13 18:08:35.668: [INFO] Profiles total count: 1
+2026-08-13 18:08:35.670: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-13 18:08:35.670: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-13 18:08:35.670: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-13 18:08:35.670: [INFO] OnDoneLoading sync enabled: 0
+2026-08-13 18:08:35.670: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-13 18:08:35.671: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-13 18:08:35.671: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-13 23:11:41.969: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-17 18:38:19.401: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-17 18:38:19.401: [INFO] Profiles total count: 1
+2026-08-17 18:38:19.402: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-17 18:38:19.402: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-17 18:38:19.402: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-17 18:38:19.402: [INFO] OnDoneLoading sync enabled: 0
+2026-08-17 18:38:19.402: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-17 18:38:19.402: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-17 18:38:19.402: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-19 01:50:07.789: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-24 20:14:51.988: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-24 20:14:51.988: [INFO] Profiles total count: 1
+2026-08-24 20:14:51.989: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-24 20:14:51.989: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-24 20:14:51.989: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-08-24 20:14:51.989: [INFO] OnDoneLoading sync enabled: 0
+2026-08-24 20:14:51.989: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-24 20:14:51.989: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-24 20:14:51.989: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-27 11:34:13.070: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-06 13:48:30.440: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-06 13:48:30.440: [INFO] Profiles total count: 1
+2026-09-06 13:48:30.440: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-06 13:48:30.440: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-06 13:48:30.440: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-06 13:48:30.440: [INFO] OnDoneLoading sync enabled: 0
+2026-09-06 13:48:30.440: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-06 13:48:30.440: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-06 13:48:30.440: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-08 17:33:43.811: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 08:33:33.281: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 08:33:33.281: [INFO] Profiles total count: 1
+2026-09-09 08:33:33.281: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 08:33:33.281: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 08:33:33.281: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 08:33:33.281: [INFO] OnDoneLoading sync enabled: 0
+2026-09-09 08:33:33.281: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-09 08:33:33.282: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-09 08:33:33.282: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 09:00:44.961: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 09:05:44.622: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 09:05:44.622: [INFO] Profiles total count: 1
+2026-09-09 09:05:44.622: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 09:05:44.622: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 09:05:44.622: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 09:05:44.622: [INFO] OnDoneLoading sync enabled: 0
+2026-09-09 09:05:44.622: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-09 09:05:44.622: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-09 09:05:44.622: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 09:45:35.507: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 09:48:04.787: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 09:48:04.787: [INFO] Profiles total count: 1
+2026-09-09 09:48:04.787: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 09:48:04.787: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 09:48:04.787: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 09:48:04.787: [INFO] OnDoneLoading sync enabled: 0
+2026-09-09 09:48:04.787: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-09 09:48:04.787: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-09 09:48:04.787: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 09:48:22.698: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 09:56:08.926: [INFO] CurrentProfilePath: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 09:56:08.926: [INFO] Profiles total count: 1
+2026-09-09 09:56:08.927: [INFO] Profile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 09:56:08.927: [INFO] LastUsedProfileDir: C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-09-09 09:56:08.927: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\Shiv\eclipse-workspace\radsanWebsite\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-06-26T15:36:15.577Z
+2026-09-09 09:56:08.927: [INFO] OnDoneLoading sync enabled: 0
+2026-09-09 09:56:08.927: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-09-09 09:56:08.927: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-09-09 09:56:08.927: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-09-09 10:25:25.920: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

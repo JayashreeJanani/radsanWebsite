@@ -1,0 +1,5 @@
+package com.radsan.dto;
+
+public class LoginResponseDTO {
+
+}

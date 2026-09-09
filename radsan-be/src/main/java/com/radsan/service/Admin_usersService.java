@@ -2,22 +2,30 @@ package com.radsan.service;
 
 import java.util.List;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.radsan.dto.AdminRequestDTO;
 import com.radsan.dto.AdminResponseDTO;
+import com.radsan.dto.LoginRequestDTO;
+import com.radsan.dto.LoginResponseDTO;
 import com.radsan.entity.Admin_users;
+import com.radsan.exception.BadRequestException;
 import com.radsan.exception.ResourceAlreadyExistsException;
 import com.radsan.exception.ResourceNotFoundException;
 import com.radsan.respository.Admin_usersRepository;
+import com.radsan.security.JwtService;
 
 @Service
 public class Admin_usersService {
 	
 	private final Admin_usersRepository adminRepository;
-	
-	public Admin_usersService(Admin_usersRepository adminRepository) {
+	private final PasswordEncoder passwordEncoder;//password hashing
+	private final JwtService jwtService;
+	public Admin_usersService(Admin_usersRepository adminRepository, PasswordEncoder passwordEncoder,JwtService jwtService) {
 		this.adminRepository = adminRepository;
+		this.passwordEncoder = passwordEncoder;//password hashing
+		this.jwtService = jwtService;
 	}
 	
 	//for api: GET /api/admin_users
@@ -66,7 +74,9 @@ public class Admin_usersService {
 
 	    admins.setUsername(adminRequestDTO.getUsername());
 	    admins.setEmail(adminRequestDTO.getEmail());
-	    admins.setPassword_hash(adminRequestDTO.getPassword_hash());
+	    admins.setPassword_hash(
+	            passwordEncoder.encode(adminRequestDTO.getPassword())
+	    );//security(JWT)
 	    admins.setIs_active(adminRequestDTO.getIs_active());
 
 	    Admin_users savedAdmins = adminRepository.save(admins);
@@ -88,7 +98,9 @@ public class Admin_usersService {
 				.orElseThrow(() -> new ResourceNotFoundException("Admin not found in id" +id));
 		admin_users.setUsername(updatedAdminUsers.getUsername());
 		admin_users.setEmail(updatedAdminUsers.getEmail());
-		admin_users.setPassword_hash(updatedAdminUsers.getPassword_hash());
+		admin_users.setPassword_hash(
+		        passwordEncoder.encode(updatedAdminUsers.getPassword())
+		);//password hashing
 		admin_users.setIs_active(updatedAdminUsers.getIs_active());
 		
 		Admin_users updatedAdmins = adminRepository.save(admin_users);
@@ -105,8 +117,36 @@ public class Admin_usersService {
 	//for api: DELETE /api/admin_users
 	public void deleteAdmin_users(Integer id) {
 		Admin_users admin_users = adminRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException("Admin not found in id" +id));
+				.orElseThrow(() ->
+			    new ResourceNotFoundException(
+			        "Admin not found with id: " + id
+			    )
+			);
 		adminRepository.delete(admin_users);
 	}
+	
+	//authentication
+	public LoginResponseDTO login(LoginRequestDTO loginRequestDTO) {
 
+	    Admin_users admin = adminRepository
+	            .findByEmail(loginRequestDTO.getEmail())
+	            .orElseThrow(() ->
+	                new BadRequestException("Invalid email or password")
+	            );
+
+	    if (!admin.getIs_active()) {
+	        throw new BadRequestException("Admin account is inactive");
+	    }
+
+	    if (!passwordEncoder.matches(
+	            loginRequestDTO.getPassword(),
+	            admin.getPassword_hash())) {
+
+	        throw new BadRequestException("Invalid email or password");
+	    }
+
+	    String token = jwtService.generateToken(admin.getEmail());
+
+	    return new LoginResponseDTO(token);
+	}
 }

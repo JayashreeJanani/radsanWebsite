@@ -1,0 +1,5 @@
+package com.radsan.exception;
+
+public class BadRequestException {
+
+}

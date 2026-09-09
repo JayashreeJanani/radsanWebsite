@@ -1,0 +1,17 @@
+package com.radsan.security;
+/*
+ * Primary goal here:
+ * ->generate token
+->validate token
+->extract email from token*/
+//One important architecture distinction:
+//
+//SecurityConfig
+//→ tells Spring HOW requests are secured
+//
+//JwtService
+//→ creates and reads JWT tokens
+
+public class JwtService {
+
+}

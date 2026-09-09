@@ -1,0 +1,10 @@
+package com.radsan.security;
+/*
+ * Primary goal here:
+ * ->generate token
+->validate token
+->extract email from token*/
+
+public class JwtService {
+
+}

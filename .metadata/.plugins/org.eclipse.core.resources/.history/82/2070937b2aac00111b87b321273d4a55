@@ -1,0 +1,5 @@
+package com.radsan.config;
+
+public class SecurityConfig {
+
+}

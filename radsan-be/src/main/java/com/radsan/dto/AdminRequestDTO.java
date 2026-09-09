@@ -14,11 +14,12 @@ public class AdminRequestDTO {
 	@Email
 	private String email;
 	
-	@Pattern(
-		    regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8,}$",
-		    message = "Password must contain uppercase, lowercase, number and special character"
-		)
-	private String password_hash;
+	@NotBlank(message = "Password cannot be empty")
+    @Pattern(
+        regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8,}$",
+        message = "Password must contain uppercase, lowercase, number and special character"
+    )
+    private String password;
 	
 	@NotNull(message = "Cannot be null should be true or false")
 	private Boolean is_active;
@@ -41,12 +42,12 @@ public class AdminRequestDTO {
 		this.email = email;
 	}
 
-	public String getPassword_hash() {
-		return password_hash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPassword_hash(String password_hash) {
-		this.password_hash = password_hash;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public Boolean getIs_active() {
