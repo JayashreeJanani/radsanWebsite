@@ -36,7 +36,9 @@ public class SecurityConfig {
 
 	    http
 	        .csrf(csrf -> csrf.disable())
-
+	        
+	        .cors(cors -> {})
+	        
 	        .sessionManagement(session ->
 	            session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 	        )
@@ -48,6 +50,7 @@ public class SecurityConfig {
 	        )
 
 	        .authorizeHttpRequests(auth -> auth
+	        		 .requestMatchers("/api/auth/login").permitAll()
 	        		  .requestMatchers(
 	        			        HttpMethod.GET,
 	        			        "/api/products/**",

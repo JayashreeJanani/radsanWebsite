@@ -5,8 +5,10 @@ import java.util.Date;
 
 import javax.crypto.SecretKey;
 
-import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import com.radsan.config.JwtProperties;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -27,15 +29,19 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JwtService {
 
-    @Value("${jwt.secret}")
-    private String secretKey;
+//    @Value("${jwt.secret}")
+//    private String secretKey;
+//
+//    @Value("${jwt.expiration}")
+//    private long expiration;
+	private final JwtProperties jwtProperties;
 
-    @Value("${jwt.expiration}")
-    private long expiration;
-    
+	public JwtService(JwtProperties jwtProperties) {
+	    this.jwtProperties = jwtProperties;
+	}
     private SecretKey getSigningKey() {
         return Keys.hmacShaKeyFor(
-                secretKey.getBytes(StandardCharsets.UTF_8)
+                jwtProperties.getSecret().getBytes(StandardCharsets.UTF_8)
         );
     }
     
@@ -44,7 +50,7 @@ public class JwtService {
         Date now = new Date();
 
         Date expiryDate = new Date(
-                now.getTime() + expiration
+                now.getTime() + jwtProperties.getExpiration()
         );
 
         return Jwts.builder()
