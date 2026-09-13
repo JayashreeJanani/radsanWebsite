@@ -2,6 +2,8 @@ package com.radsan.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.radsan.dto.Job_ApplicationRequestDTO;
@@ -18,6 +20,8 @@ import com.radsan.respository.JobPostingsRepository;
 public class Job_applicationService {
 	private final JobApplicationRepository jobApplicationRepository;
 	private final JobPostingsRepository jobPostingsRepository;
+	private static final Logger logger =
+	        LoggerFactory.getLogger(Job_applicationService.class);
 	
 	public Job_applicationService(JobApplicationRepository jobApplicationRepository, JobPostingsRepository jobPostingsRepository ) {
 		this.jobApplicationRepository = jobApplicationRepository;
@@ -93,6 +97,10 @@ public class Job_applicationService {
 		
 		
 		Job_application savedApplications = jobApplicationRepository.save(job_application);
+		logger.info(
+			    "Job application submitted successfully for job ID: {}",
+			    job_postings.getId()
+			);
 		Job_ApplicationResponseDTO job_applicationResponseDTO = new Job_ApplicationResponseDTO();
 		
 		job_applicationResponseDTO.setId(savedApplications.getId());

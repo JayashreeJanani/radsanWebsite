@@ -2,6 +2,8 @@ package com.radsan.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,8 @@ public class Admin_usersService {
 	private final Admin_usersRepository adminRepository;
 	private final PasswordEncoder passwordEncoder;//password hashing
 	private final JwtService jwtService;
+	private static final Logger logger =
+	        LoggerFactory.getLogger(Admin_usersService.class);
 	public Admin_usersService(Admin_usersRepository adminRepository, PasswordEncoder passwordEncoder,JwtService jwtService) {
 		this.adminRepository = adminRepository;
 		this.passwordEncoder = passwordEncoder;//password hashing
@@ -127,7 +131,8 @@ public class Admin_usersService {
 	
 	//authentication
 	public LoginResponseDTO login(LoginRequestDTO loginRequestDTO) {
-
+		logger.info("Admin login attempt");
+//		logger.debug("Login method entered");
 	    Admin_users admin = adminRepository
 	            .findByEmail(loginRequestDTO.getEmail())
 	            .orElseThrow(() ->
@@ -141,11 +146,12 @@ public class Admin_usersService {
 	    if (!passwordEncoder.matches(
 	            loginRequestDTO.getPassword(),
 	            admin.getPassword_hash())) {
-
+	    	logger.warn("Admin login failed: invalid credentials");
 	        throw new BadRequestException("Invalid email or password");
 	    }
 
 	    String token = jwtService.generateToken(admin.getEmail());
+	    logger.info("Admin login successful");
 
 	    return new LoginResponseDTO(token);
 	}
