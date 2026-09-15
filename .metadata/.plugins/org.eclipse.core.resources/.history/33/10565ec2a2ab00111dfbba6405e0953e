@@ -1,9 +1,0 @@
-package com.radsan.exception;
-
-public class BadRequestException {
-	
-	  public BadRequestException(String message) {
-	        super();
-	    }
-
-}
