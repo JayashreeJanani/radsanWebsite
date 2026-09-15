@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026-09-15T12:08:43.660-03:00  INFO 25376 --- [radsan-be] [main] com.radsan.RadsanBeApplicationTests      : Starting RadsanBeApplicationTests using Java 21.0.10 with PID 25376 (started by Shiv in C:\Users\Shiv\eclipse-workspace\radsanWebsite\radsan-be)
 2026-09-15T12:08:43.667-03:00 DEBUG 25376 --- [radsan-be] [main] com.radsan.RadsanBeApplicationTests      : Running with Spring Boot v4.0.3, Spring v7.0.5
 2026-09-15T12:08:43.669-03:00  INFO 25376 --- [radsan-be] [main] com.radsan.RadsanBeApplicationTests      : The following 1 profile is active: "dev"
@@ -308,3 +309,6 @@ Caused by: java.lang.IllegalArgumentException: 'url' must start with "jdbc"
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.5.jar:7.0.5]
 	... 123 common frames omitted
 
+=======
+
+>>>>>>> 8729db61ca7fd23c7ecea02a9dd782f6bbb63dad
